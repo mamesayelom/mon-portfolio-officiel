@@ -355,18 +355,15 @@ header {
 .info a { text-decoration: none; word-break: break-all; }
 .info a:hover { color: var(--hover); }
 
-form { display: flex; flex-direction: column; gap: 8px; }
-label { font-size: 0.9rem; font-weight: 500; }
-input, textarea {
-    font: inherit;
-    color: var(--color);
-    background: #fff;
-    padding: 12px;
-    border-radius: 8px;
+.chat {
+    background: var(--component);
     border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 32px 24px;
+    text-align: center;
 }
-textarea { resize: vertical; }
-form .btn { margin-top: 12px; align-self: flex-start; }
+.chat i { font-size: 2.6rem; margin-bottom: 8px; }
+.chat p { margin-bottom: 20px; }
 
 /* ===== Pied de page ===== */
 footer {
@@ -405,18 +402,10 @@ footer p { color: var(--background); }
     .actions, .socials { justify-content: flex-start; }
 
     .skills { grid-template-columns: repeat(3, 1fr); }
-    .projects { grid-template-columns: repeat(3, 1fr); }
 }
 
 /* ===== Respect de la préférence "moins d'animations" ===== */
 @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
     * { transition: none !important; }
-}
-
-/* Grand écran : moins d'espace en bas de chaque section */
-@media (min-width: 900px) {
-    section {
-        padding-bottom: 40px;
-    }
 }
